@@ -5,7 +5,12 @@ import App from './App';
 import { HashRouter } from "react-router-dom"
 
 
-ReactDOM.render(
-    <HashRouter><App /></HashRouter>,
-    document.getElementById('root')
+
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <HashRouter><App /></HashRouter>
+  </React.StrictMode>
 );
