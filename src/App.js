@@ -33,6 +33,7 @@ function App() {
             y: -450
         },
         timeStamp: `Add: ${timeStamp()}`,
+        status: false,
       }
       setTodos((todos) => [...todos, newItem])
       setDescription('')
@@ -57,6 +58,9 @@ function App() {
     setTodos(newArr)
   }
 
+  const toggleCheck = (todo) => {
+    setTodos(todos.map((item => item.id === todo.id? {...item, status:!item.status}: item)))
+  }
   return (
     <div className="App">
       {todos.length!==0? <h6 style={{margin: 0, padding: 0, textAlign: 'center',background: '#5c5b58', color: '#aadbaa'}}> Task counter : {todos.length}</h6>: ''}
@@ -74,7 +78,7 @@ function App() {
             value={description}
             className='input'
             type='text'
-            placeholder='input description task...   please!'
+            placeholder='*** input description task...   please! ***'
             onChange={(e) => setDescription(e.target.value)}
             onKeyDown={(e) => {
               if(e.key === 'Enter') {
@@ -96,13 +100,20 @@ function App() {
                   updatePos(data, index)
               }}
             >
-              <div className='todo__item' style={{backgroundColor: todo.color}}>
-              <button
-                  className='delete'
-                    onClick={() => deleteTodo(todo.id)}
-                    >X
+           
+              <div id={todo.id} className='todo__item' style={{backgroundColor: todo.color}}>
+              <div className='btns-container'>
+                <button
+                    className='delete'
+                      onClick={() => deleteTodo(todo.id)}
+                      >X
                 </button>
-                <div className='text-todo'>
+
+                  <input type='checkbox' defaultChecked={todo.status} className='checkbox-complete' onClick={() => toggleCheck(todo)}>
+                  </input>
+              </div>
+
+                <div className={todo.status?'text-todo complete': 'text-todo'}>
                   <div className='title-todo'>{todo.title}</div>
                   <div className='title-description'>{todo.description }</div>
                   <div className='stamp'>{todo.timeStamp}</div>
