@@ -18,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "https://igor-sergeevich-po.github.io/petpr-react-todo/",
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
