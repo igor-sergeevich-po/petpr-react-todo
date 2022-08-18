@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/igor-sergeevich-po/petpr-react-todo/static/css/main.c42ca310.css",
-    "main.js": "/igor-sergeevich-po/petpr-react-todo/static/js/main.339bcfe8.js",
+    "main.css": "/igor-sergeevich-po/petpr-react-todo/static/css/main.f2000679.css",
+    "main.js": "/igor-sergeevich-po/petpr-react-todo/static/js/main.eea2bb26.js",
     "index.html": "/igor-sergeevich-po/petpr-react-todo/index.html",
-    "main.c42ca310.css.map": "/igor-sergeevich-po/petpr-react-todo/static/css/main.c42ca310.css.map",
-    "main.339bcfe8.js.map": "/igor-sergeevich-po/petpr-react-todo/static/js/main.339bcfe8.js.map"
+    "main.f2000679.css.map": "/igor-sergeevich-po/petpr-react-todo/static/css/main.f2000679.css.map",
+    "main.eea2bb26.js.map": "/igor-sergeevich-po/petpr-react-todo/static/js/main.eea2bb26.js.map"
   },
   "entrypoints": [
-    "static/css/main.c42ca310.css",
-    "static/js/main.339bcfe8.js"
+    "static/css/main.f2000679.css",
+    "static/js/main.eea2bb26.js"
   ]
 }
